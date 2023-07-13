@@ -1,4 +1,3 @@
-import shutil
 import os
 import sys
 from modules import scripts_postprocessing
@@ -14,7 +13,7 @@ sys.path.append(current_dir)
 import infer
 
 def callback():
-    shutil.copytree( './extensions/sd-webui-cloth-segmentation/trained_checkpoint', './repositories/clothSegmentation/trained_checkpoint', dirs_exist_ok=True )
+    os.makedirs( './repositories/clothSegmentation/trained_checkpoint', exist_ok=True )
 
 class ScriptPostprocessingClothSegmentation(scripts_postprocessing.ScriptPostprocessing):
     name = 'Cloth Segmentation'

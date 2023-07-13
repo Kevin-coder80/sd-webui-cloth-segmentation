@@ -14,7 +14,6 @@ sys.path.append(current_dir)
 import infer
 
 def callback():
-    shutil.copytree( './extensions/sd-webui-cloth-segmentation/imaterialist', './repositories/clothSegmentation/imaterialist', dirs_exist_ok=True )
     shutil.copytree( './extensions/sd-webui-cloth-segmentation/trained_checkpoint', './repositories/clothSegmentation/trained_checkpoint', dirs_exist_ok=True )
 
 class ScriptPostprocessingClothSegmentation(scripts_postprocessing.ScriptPostprocessing):
